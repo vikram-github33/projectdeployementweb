@@ -1,0 +1,714 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+      />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <style>
+        .btn-contact {
+          background-color: #ef3f3f;
+          color: white;
+          font-weight: 500;
+          padding: 0.4rem 1rem;
+          border-radius: 0.5rem;
+          border: none;
+        }
+
+        .btn-contact:hover {
+          background-color: #d83838;
+          color: white;
+        }
+
+        .nav{
+          background-color:#4a3f47;
+        }
+
+        .hero-section {
+          min-height: 50vh;
+          display: flex;
+          align-items: center;
+          background-color: #f8f9fa;
+          padding: 2rem;
+           background-image: url('your-icons/Desktop.jpg');
+        }
+
+        .hero-heading {
+          font-size: 2.5rem;
+          font-weight: 700;
+        }
+
+        .hero-text {
+          font-size: 1rem;
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+        }
+
+        .email-input {
+          max-width: 400px;
+          border-top-left-radius: 0.5rem;
+          border-bottom-left-radius: 0.5rem;
+          border-right: none;
+        }
+
+        .subscribe-btn {
+          background-color: #ef3f3f;
+          color: white;
+          border-top-right-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
+          border: none;
+          padding: 0.5rem 1.2rem;
+        }
+        .subscribe-btn:hover {
+          background-color: #d83838;
+          color: white;
+        }
+        .hero-img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 0.5rem;
+        }
+
+        .service-box {
+          text-align: center;
+          padding: 2rem 1rem;
+        }
+
+        .service-box img {
+          width: 80px;
+          height: 80px;
+          object-fit: contain;
+          margin-bottom: 1rem;
+        }
+
+        .service-box h5 {
+          font-weight: 600;
+          font-size: 1.1rem;
+        }
+
+        .service-box p {
+          font-size: 0.95rem;
+          color: #444;
+          max-width: 280px;
+          margin: 0 auto;
+        }
+
+        @media (max-width: 576px) {
+          .service-box img {
+            width: 64px;
+            height: 64px;
+          }
+        }
+
+        @media (min-width: 1025px) {
+           .hero-section {
+          min-height: 100vh;
+          }
+
+        }
+
+        @media (max-width: 1000px) {
+          .hide-on-iphone-11-pro {
+            display: none !important;
+          }
+          .hero-heading {
+            font-size: 2rem;
+          }
+          .center-align-iphone-11-pro {
+            text-align: center;
+          }
+        }
+
+        
+        .test-section {
+          background: linear-gradient(to right, #ef3f3f, #ef3f3f);
+          color: white;
+          padding: 60px 20px;
+          text-align: center;
+        }
+
+        .test-section h2 {
+          font-size: 2.2rem;
+          font-weight: 700;
+        }
+
+        .test-section small {
+          font-size: 1rem;
+          display: block;
+          margin-bottom: 2rem;
+        }
+
+        .benefit-icon {
+          width: 64px;
+          height: 6 4px;
+          object-fit: contain;
+        }
+
+        .Illustration-img{
+          width: 200px;
+          height: 200px;
+          object-fit: contain;
+        }
+
+
+        .benefit-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          margin: 15px 0;
+          flex-wrap: wrap;
+        }
+
+        @media (min-width: 768px) {
+          .benefit-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+          }
+
+         
+          .benefit-item {
+            flex-direction: row;
+          }
+
+          .benefit-icon {
+            transform: rotate(0deg);
+          }
+        }
+
+        @media (max-width: 767px) {
+          .benefit-item {
+            flex-direction: column;
+          }
+
+          .benefit-icon {
+            transform: rotate(90deg);
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+        }
+
+        .custom-section {
+        padding: 60px 20px;
+          }
+
+      .btn-kesfet {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 8px;
+      }
+
+      .btn-kesfet:hover {
+        background-color: #d32f2f;
+      }
+
+      .img-fluid {
+        border-radius: 12px;
+      }
+
+      @media (max-width: 768px) {
+        .custom-section {
+          padding: 30px 15px;
+        }
+      }
+
+      .company-section{
+        background-color: #f5f7fa;
+      }
+
+      
+      
+      .logo-card {
+        background-color: #f5f7fa;
+        border-radius: 16px;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); */
+        height: 100px;
+        min-width: 150px;
+      }
+
+      .logo-card img {
+        max-height: 50px;
+        max-width: 100%;
+        object-fit: contain;
+      }
+
+      .reference-title {
+        font-weight: 700;
+      }
+
+      .btn-see-all {
+        color: #f44336;
+        background-color: white;
+        border: none;
+        font-weight: 600;
+        padding: 0;
+      }
+
+      .btn-see-all:hover {
+        text-decoration: underline;
+      }
+
+      /* Custom grid for desktop/ipad layout */
+      .desktop-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+      }
+
+      .row-custom {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 768px) {
+        .desktop-layout {
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
+        }
+
+        .row-custom {
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
+        }
+
+        .logo-card {
+          width: 80%;
+        }
+      }
+
+      .contact-section {
+        text-align: center;
+        padding: 60px 20px;
+      }
+      .contact-section img {
+        width: 60px;
+      }
+    .footer {
+    background-color: #f44336;
+    color: white;
+    padding: 40px 20px;
+    font-family: sans-serif;
+  }
+
+  .footer a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 6px 0;
+    font-size: 0.95rem;
+  }
+
+  .footer h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .footer .social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer .social-icons a {
+    font-size: 20px;
+    margin: 0 10px;
+    color: white;
+    transition: color 0.3s;
+  }
+
+  .footer .social-icons a:hover {
+    color: #ccc;
+  }
+
+  .footer .copyright {
+    font-size: 0.9rem;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .footer .row > div {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .footer .social-icons {
+      margin-top: 10px;
+    }
+  }
+      </style>
+      
+      </head>
+      <body>
+        <div class="hero-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <!-- Hamburger (triggers offcanvas) -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- İletişim button for small screens -->
+            <button class="btn btn-contact d-lg-none ms-2">İletişim</button>
+
+            <!-- Offcanvas Menu -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Menü</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Çözüm ve Hizmetler</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#">Ürünler</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Teknolojiler</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">İnsan Kaynakları</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Kurumsal</a>
+                  </li>
+                  <li class="nav-item d-lg-none">
+                    <a class="btn btn-contact mt-3" href="#">İletişim</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Normal Menu for desktop -->
+            <div
+              class="collapse navbar-collapse d-none d-lg-flex justify-content-center"
+            >
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Çözüm ve Hizmetler</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Ürünler</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Teknolojiler</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">İnsan Kaynakları</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Kurumsal</a></li>
+              </ul>
+              <form class="d-flex">
+                <button class="btn btn-contact">İletişim</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <section class="hero-section container-fluid">
+        <div class="container">
+          <div class="row align-items-center center-align-iphone-11-pro">
+            <!-- Left Content -->
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+              <h1 class="hero-heading">
+                Bilgi Teknolojilerinde<br />23 Yıllık Tecrübe
+              </h1>
+              <p class="hero-text">
+                Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için
+                farklı sektörlerde tecrübe kazanmış uzman kadrolarımızla Proje
+                Yönetimi, İş Analizi ve Test Yönetimi hizmetleri sunmaktayız.
+              </p>
+
+              <!-- Email + Button Group -->
+              <div class="d-flex">
+                <input
+                  type="email"
+                  class="form-control email-input"
+                  placeholder="Mail bültenimize kayıt ol"
+                />
+                <button class="subscribe-btn">Kayıt Ol</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+        <section class="py-5 text-center">
+          <div class="container">
+            <h2 class="fw-bold display-6">Kalite ve Süreç Yönetimi</h2>
+            <p class="lead mx-auto" style="max-width: 720px">
+              Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için
+              farklı sektörlerde tecrübe kazanmış uzman kadrolarımızla Proje
+              Yönetimi, İş Analizi ve Test Yönetimi hizmetleri sunmaktayız.
+            </p>
+          </div>
+        </section>
+        <section class="py-5">
+          <div class="container">
+            <div class="row g-4">
+              <!-- Card 1 -->
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="service-box">
+                  <img src="your-icons/icon1.png" alt="Döküman Analizi" />
+                  <h5>Döküman Analizi</h5>
+                  <p>
+                    Ante vulputate ut at accumsan et. Feugiat at tempus, est
+                    senectus amet, elementum.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="service-box">
+                  <img src="your-icons/icon2.png" alt="Kabul ve Değerlendirme" />
+                  <h5>Kabul ve Değerlendirme</h5>
+                  <p>
+                    Ante vulputate ut at accumsan et. Feugiat at tempus, est
+                    senectus amet, elementum.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="service-box">
+                  <img src="your-icons/icon3.png" alt="İş Kuralları Analizi" />
+                  <h5>İş Kuralları Analizi</h5>
+                  <p>
+                    Ante vulputate ut at accumsan et. Feugiat at tempus, est
+                    senectus amet, elementum.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="service-box">
+                  <img src="your-icons/icon4.png" alt="Akış Diyagramları" />
+                  <h5>Akış Diyagramları</h5>
+                  <p>
+                    Ante vulputate ut at accumsan et. Feugiat at tempus, est
+                    senectus amet, elementum.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="service-box">
+                  <img src="your-icons/icon5.png" alt="Paydaş Analizi" />
+                  <h5>Paydaş Analizi</h5>
+                  <p>
+                    Ante vulputate ut at accumsan et. Feugiat at tempus, est
+                    senectus amet, elementum.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="service-box">
+                  <img src="your-icons/icon6.png" alt="Prototipleme" />
+                  <h5>Prototipleme</h5>
+                  <p>
+                    Ante vulputate ut at accumsan et. Feugiat at tempus, est
+                    senectus amet, elementum.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="test-section">
+          <div class="container">
+            <h2>Test Yönetimiyle Neler Sağlıyoruz?</h2>
+            <small>IoT Destekli Çözümler</small>
+
+            <div class="benefit-wrapper mt-4">
+              <!-- Item 1 -->
+              <div class="benefit-item text-center">
+                <div>
+                  Yazılım Kalitesini <br />
+                  Arttırıyoruz
+                </div>
+                <img src="your-icons/icon7.png" alt="ok" class="benefit-icon" />
+              </div>
+
+              <!-- Item 2 -->
+              <div class="benefit-item text-center">
+                <div>
+                  Olası Hataları Önceden <br />
+                  Belirliyoruz
+                </div>
+                <img src="your-icons/icon7.png" alt="ok" class="benefit-icon" />
+              </div>
+
+              <!-- Item 3 -->
+              <div class="benefit-item text-center">
+                <div>
+                  Oluşabilecek Riskleri <br />
+                  Önlüyoruz
+                </div>
+                <img src="your-icons/icon7.png" alt="ok" class="benefit-icon" />
+              </div>
+
+              <!-- Item 4 -->
+              <div class="benefit-item text-center">
+                <div>
+                  Zaman ve Maliyetten <br />
+                  Tasarruf Sağlıyoruz
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div>
+      <div class="container custom-section company-section">
+        <div class="row align-items-center">
+          <!-- Desktop/iPad Pro 12.9” -->
+          <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
+            <h1 class="fw-bold mb-4">Kalite ve Süreç Yönetimi</h1>
+            <p class="text-secondary mb-4">
+              Deneyimli kadromuz; birçok farklı sektörden deneyimli, PMP<sup>®</sup> sertifikasına sahip, uzman proje yöneticilerinden oluşmaktadır.<br /><br />
+              Projelerinizin yönetimine destek olmak, zayıf olduğunu düşündüğünüz alanları güçlendirmek, uluslararası geçerliliği olan PMI<sup>®</sup> metodolojisini şirketinizde uygulamak ve geliştirmek için yanınızdayız.
+            </p>
+            <button class="btn btn-kesfet">Keşfet</button>
+          </div>
+
+          <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0 text-center">
+            <img src="your-icons/Illustration.jpg" alt="Kalite ve Süreç" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+      <div class="container section">
+        <div class="row align-items-center">
+          <div class="col-lg-6 text-center mb-4 mb-lg-0">
+            <img src="your-icons/Illustration-3.jpg" alt="Laptop" class="img-fluid" />
+          </div>
+          <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="fw-bold mb-4">Kalite ve Süreç Yönetimi</h1>
+            <p class="text-secondary mb-4">
+              Deneyimli kadromuz; birçok farklı sektörden deneyimli, PMP<sup>®</sup> sertifikasına sahip, uzman proje yöneticilerinden oluşmaktadır.<br /><br />
+              Projelerinizin yönetimine destek olmak, zayıf olduğunu düşündüğünüz alanları güçlendirmek, uluslararası geçerliliği olan PMI<sup>®</sup> metodolojisini şirketinizde uygulamak ve geliştirmek için yanınızdayız.
+            </p>
+            <button class="btn btn-kesfet">Keşfet</button>
+          </div>
+        </div>
+      </div>
+      <section class="py-5 text-center company-section mt-3">
+        <div class="container">
+          <h2 class="reference-title mb-2">Referanslarımız</h2>
+          <p class="text-muted mb-5">Bize güvenen ve beraber çalıştığımız iş ortaklarımız</p>
+
+          <div class="desktop-layout">
+            <!-- Row 1 -->
+            <div class="row-custom">
+              <div class="logo-card"><img src="your-icons/companies/akbank.png" alt="Akbank"></div>
+              <div class="logo-card"><img src="your-icons/companies/istanbulUniversity.png" alt="Bilgi"></div>
+              <div class="logo-card"><img src="your-icons/companies/aktas.png" alt="Aktaş"></div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="row-custom">
+              <div class="logo-card"><img src="your-icons/companies/borusan.png" alt="Borusan"></div>
+              <div class="logo-card"><img src="your-icons/companies/bookmyshow.png" alt="BookMyShow"></div>
+              <div class="logo-card"><img src="your-icons/companies/aksana.png" alt="Akçansa"></div>
+              <div class="logo-card"><img src="your-icons/companies/ola.png" alt="Ola"></div>
+              <div class="logo-card"><img src="your-icons/companies/amazon.png" alt="Amazon"></div>
+            </div>
+
+            <!-- Button -->
+            <div class="row-custom">
+              <div class="logo-card">
+                <img src="your-icons/companies/tumunu.png" alt="Amazon">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact-section">
+        <img src="your-icons/icon8.png" alt="Contact Icon">
+        <h2 class="mt-3 fw-bold">Bize Ulaşın</h2>
+        <p>Çözüm, hizmet ve ürünlerimiz hakkında detaylı bilgi için bizimle irtibata geçin.</p>
+        <a href="#" class="btn btn-danger mt-3">Bize Ulaşın</a>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-6 col-md-3">
+              <h6>Çözüm ve Hizmetler</h6>
+              <a href="#">Yazılım Geliştirme</a>
+              <a href="#">Outsourcing</a>
+              <a href="#">Kalite ve Süreç Yönetimi</a>
+              <a href="#">Danışmanlık</a>
+              <a href="#">IoT Destekli Çözümler</a>
+            </div>
+            <div class="col-6 col-md-3">
+              <h6>Ürünler</h6>
+              <a href="#">Eğitim Yönetim Sistemi</a>
+              <a href="#">İnsan Sermayesi Yönetim Sistemi</a>
+              <a href="#">Müşteri İlişkileri Yönetim Sistemi</a>
+              <a href="#">İçerik Yönetim Sistemi</a>
+            </div>
+            <div class="col-6 col-md-3">
+              <h6>Kurumsal</h6>
+              <a href="#">Hakkımızda</a>
+              <a href="#">Belge ve Yetkinlikler</a>
+              <a href="#">İş Ortakları</a>
+            </div>
+            <div class="col-6 col-md-3">
+              <h6>İletişim</h6>
+              <a href="#">Bilgi İstek Formu</a>
+              <a href="#">Uzman Talep Formu</a>
+            </div>
+          </div>
+          <div>
+        <div class="row align-items-center text-center text-md-start mt-4">
+      <div class="col-md-6 order-2 order-md-1">
+        <div class="copyright">
+          © Copyright 2010-2021 - Can Çevik
+        </div>
+      </div>
+      <div class="col-md-6 order-1 order-md-2 social-icons text-center text-md-end mb-3 mb-md-0">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+
+      </footer>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"
+        ></script>
+      </body>
+  </html>
